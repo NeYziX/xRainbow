@@ -101,11 +101,11 @@ bot.on('messageReactionAdd', (reaction, user) => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} vient d'arrivé sur **xRainbow**! ;)`)
+    member.guild.channels.find("name", "arrivé-départ").send(`${member} vient d'arrivé sur **xRainbow**! ;)`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté **xRainbow**. Nous te souhaitons une bonne continuation...`)
+    member.guild.channels.find("name", "arrivé-départ").send(`${member} a quitté **xRainbow**. Nous te souhaitons une bonne continuation...`)
 });
 
 bot.on("guildMemberAdd", member => {
