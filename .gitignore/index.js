@@ -35,7 +35,7 @@ bot.on('message', message => {
         else if(spliteMessage[0] === "&report") {
             message.channel.send("Rapport effectué");
             }).catch(console.error);
-        bot.channels.get('434458957252395009').send("Rapport effuectué par : " + message.author.username + " sur " + message.mentions.users.first );
+        bot.channels.get('434458957252395009').send("Rapport effuectué par : " + message.author.username);
         }
     }
 });
