@@ -31,13 +31,6 @@ bot.on('message', message => {
             }).catch(console.error);
         bot.channels.get('434402884516446230').send("Commande &help utilisée par : " + message.author.username);
         }
-      
-        else if(spliteMessage[0] === "&report") {
-            message.channel.send("Rapport effectué");
-            }).catch(console.error);
-        bot.channels.get('434458957252395009').send("Rapport effuectué par : " + message.author.username);
-        }
-    }
 });
 
 bot.on('message', message => {
