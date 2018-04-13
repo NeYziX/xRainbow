@@ -31,6 +31,7 @@ bot.on('message', message => {
             }).catch(console.error);
         bot.channels.get('434402884516446230').send("Commande &help utilisée par : " + message.author.username);
         }
+    }
 });
 
 bot.on('message', message => {
