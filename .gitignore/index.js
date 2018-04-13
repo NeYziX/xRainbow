@@ -32,7 +32,7 @@ bot.on('message', message => {
         bot.channels.get('434402884516446230').send("Commande &help utilisée par : " + message.author.username);
         } 
         
-        else if(spliteMessage[0] === "@everyone") {
+        else if(spliteMessage[0] === "§@everyone") {
             message.delete();
             }).catch(console.error);
         bot.channels.get('434402884516446230').send("Mention everyone par : " + message.author.username);
