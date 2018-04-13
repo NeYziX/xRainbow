@@ -30,14 +30,7 @@ bot.on('message', message => {
                 channel.send('**⇩ Liste des commandes ⇩: \n \n &help, pour afficher la liste les commandes \n \n &info, pour afficher les informations du Discord \n \n &ping, pour afficher la latence du bot \n \n &socialmedia | &sm, pour afficher les réseaux sociaux de PastelWorld \n \n &site, pour afficher le site de xRainbow \n \n _© NeYziX | Tous droits réservés_**');
             }).catch(console.error);
         bot.channels.get('434402884516446230').send("Commande &help utilisée par : " + message.author.username);
-        } 
-        
-        else if(spliteMessage[0] === "§@everyone") {
-            message.delete();
-            }).catch(console.error);
-        bot.channels.get('434402884516446230').send("Mention everyone par : " + message.author.username);
-        } 
-        
+        }        
     }
 });
 
