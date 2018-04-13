@@ -6,9 +6,39 @@ var prefix = ("&");
 bot.on('ready', function() {
   bot.user.setGame("&help | Dev By NeYziX");
   console.log("le bot a démarré"); 
+  bot.channels.get('434402884516446230').send("**=======================**");
+  bot.channels.get('434402884516446230').send("| LE BOT VIENT DE SE LANCER |");
+  bot.channels.get('434402884516446230').send("**=======================**");
 });
 
 bot.login("NDMzNjYzMDIzMTczOTkyNDUy.DbInWQ.1V9wiMUxMroHa-wXc4uDoBpAd-8")
+
+bot.on('message', message => {
+    if(message.content[0] === prefix) {
+        let spliteMessage = message.content.split(' ');
+        if(spliteMessage[0] === "&hello") {
+            message.channel.send("world!");
+            message.author.createDM().then(channel => {
+                channel.send('WORLD!');
+            }).catch(console.error);
+        bot.channels.get('434402884516446230').send("Commande §hello utilisée par : " + message.author.username);
+        }
+      
+        else if(spliteMessage[0] === "&help") {
+            message.channel.send("Liste des commandes envoyées en privée.");
+            message.author.createDM().then(channel => {
+                channel.send('**⇩ Liste des commandes ⇩: \n \n &help, pour afficher la liste les commandes \n \n &info, pour afficher les informations du Discord \n \n &ping, pour afficher la latence du bot \n \n &socialmedia | &sm, pour afficher les réseaux sociaux de PastelWorld \n \n &site, pour afficher le site de xRainbow \n \n _© NeYziX | Tous droits réservés_**');
+            }).catch(console.error);
+        bot.channels.get('434402884516446230').send("Commande &help utilisée par : " + message.author.username);
+        }    
+    }
+});
+
+bot.on('message', message => {
+    if (message.content === prefix + "ping"){
+        message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
+    }
+});      
 
 bot.on('message', message => {
 
@@ -16,10 +46,11 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
-        .addField("Crée le :", message.guild.createdAt)
-        .addField("Crée par :", message.server.owner_id)
+        .addField("Crée le :", "19/01/18 20:09:34")
+        .addField("Crée par :", "NeYziX 👑#4255")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
+        .addField("ID :", "429755740589391873")
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
@@ -40,24 +71,41 @@ bot.on('message', message => {
 
 bot.on('message', message => {
 
-    if (message.content === prefix + "help") {
+    if (message.content === prefix + "sm") {
         var embed = new Discord.RichEmbed()
-        .setDescription("⇩Liste des commandes⇩:")
-        .addField("&help", "Pour afficher la liste les commandes")
-        .addField("&info", "Pour afficher les informations du Discord")
-        .addField("&site", "Pour afficher le site de xRainbow")
+        .setDescription("Réseaux sociaux de xRainbow :")
+        .addField("Instagram :", "...") 
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
     }
 });
 
+bot.on('message', message => {
+
+    if (message.content === prefix + "socialmedia") {
+        var embed = new Discord.RichEmbed()
+        .setDescription("Réseaux sociaux de PastelWorld :")
+        .addField("Instagram :", "...")
+        .setFooter("©NeYziX | Tous droits réservés.")
+        .setColor("0x81DAF5")
+    message.channel.sendEmbed(embed)
+    }
+});
+
+bot.on('messageReactionAdd', (reaction, user) => {
+    if(reaction.emoji.name === "☺")
+        bot.channels.get('434402884516446230').send("EZ");
+  
+    bot.channels.get('434402884516446230').send("Réaction utilisée : " + reaction.emoji.name);
+});
+
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "arrivé-départ").send(`${member} est arrivé sur xRainbow;)`)
+    member.guild.channels.find("name", "bienvenue").send(`${member} vient d'arrivé sur **xRainbow**! ;)`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "arrivé-départ").send(`${member} a quitté xRainbow.`)
+    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté **xRainbow**. Nous te souhaitons une bonne continuation...`)
 });
 
 bot.on("guildMemberAdd", member => {
