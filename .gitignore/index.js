@@ -53,14 +53,14 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member}, allez dans le #conditions-ďutilisation puis mettez une réaction :bust_in_silhouette:  **(après avoir lu les règles)** ;)`)
+    member.guild.channels.find("name", "bienvenue").send(`${member} est arrivé sur xRainbow;)`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté PastelWorld. Nous te souhaitons une bonne continuation.`)
+    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté xRainbow.`)
 });
 
 bot.on("guildMemberAdd", member => {
-    var role = member.guild.roles.find('name', 'Nouveaux');
+    var role = member.guild.roles.find('name', 'Membres 🌟');
     member.addRole(role)
 })
