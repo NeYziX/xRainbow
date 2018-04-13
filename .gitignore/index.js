@@ -46,7 +46,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
         .setDescription("Information de Discord :")
         .addField("Nom du Discord :", message.guild.name)        
-        .addField("Crée le :", "19/01/18 20:09:34")
+        .addField("Crée le :", "31/03/18 23:35:53")
         .addField("Crée par :", "NeYziX 👑#4255")
         .addField("Tu as rejoint le :", message.member.joinedAt)
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
