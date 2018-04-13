@@ -53,11 +53,11 @@ bot.on('message', message => {
 });
 
 bot.on("guildMemberAdd", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} est arrivé sur xRainbow;)`)
+    member.guild.channels.find("name", "arrivé-départ").send(`${member} est arrivé sur xRainbow;)`)
 });
 
 bot.on("guildMemberRemove", member => {
-    member.guild.channels.find("name", "bienvenue").send(`${member} a quitté xRainbow.`)
+    member.guild.channels.find("name", "arrivé-départ").send(`${member} a quitté xRainbow.`)
 });
 
 bot.on("guildMemberAdd", member => {
