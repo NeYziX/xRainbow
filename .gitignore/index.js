@@ -44,6 +44,13 @@ bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
+}); 
+
+bot.on('message', message => {
+    if (message.content === prefix + "report"){
+        message.channel.send("Rapport effectué");
+    bot.channels.get('434458957252395009').send("Rapport effuectué par : " + message.author.username);
+    }
 });      
 
 bot.on('message', message => {
