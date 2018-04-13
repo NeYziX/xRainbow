@@ -43,9 +43,9 @@ bot.on('message', message => {
     if (message.content === prefix + "help") {
         var embed = new Discord.RichEmbed()
         .setDescription("⇩Liste des commandes⇩:")
-        .addField("§help", "Pour afficher la liste les commandes")
-        .addField("§info", "Pour afficher les informations du Discord")
-        .addField("§site", "Pour afficher le site de xRainbow")
+        .addField("&help", "Pour afficher la liste les commandes")
+        .addField("&info", "Pour afficher les informations du Discord")
+        .addField("&site", "Pour afficher le site de xRainbow")
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0x81DAF5")
     message.channel.sendEmbed(embed)
