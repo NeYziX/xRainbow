@@ -15,7 +15,7 @@ bot.login("NDMzNjYzMDIzMTczOTkyNDUy.DbKxgw.Z9wERpXG-iRS6XuPbKAnw1KP6mo");
 
 bot.on('message', message => {
   if (message.content === '&avatar') {
-    message.reply(message.author.avatarURL)
+    message.reply("voici ton avatar : " + message.author.avatarURL)
   }
 });
 
