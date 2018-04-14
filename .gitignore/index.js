@@ -3,6 +3,13 @@ const bot = new Discord.Client();
 
 var prefix = ("&");
 
+var eightball = [
+    "Oui!",
+    "Non...",
+    "Peut-être?",
+    "Surement ^^",
+]
+
 bot.on('ready', function() {
   bot.user.setGame("&help | Dev By NeYziX");
   console.log("le bot a démarré"); 
