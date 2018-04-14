@@ -18,7 +18,7 @@ bot.on('ready', function() {
   bot.channels.get('434402884516446230').send("**=======================**");
 });
 
-bot.login("process.env.BOT_TOKEN");
+bot.login(process.env.BOT_TOKEN);
 
 bot.on('message', message => {
   if (message.content.startsWith(prefix + "avatar")) {
