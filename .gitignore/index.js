@@ -25,7 +25,7 @@ bot.on('message', message => {
 
 message.channel.send({embed: {
 
-    title: "Votre avatar",
+    title: "Votre avatar :Hihi:",
 
     image: {
 
