@@ -17,6 +17,26 @@ bot.on('message', message => {
   if (message.content === '&avatar') {
     message.reply("voici ton avatar : " + message.author.avatarURL)
   }
+
+  if (message.content.startsWith(prefix + "avatar")) {
+
+message.channel.send({embed: {
+
+    title: "Votre avatar",
+
+    image: {
+
+        url: message.author.avatarURL
+
+    },
+
+    color: 15722240
+
+}
+
+    })
+
+}
 });
 
 bot.on('message', message => {
