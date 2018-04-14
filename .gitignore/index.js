@@ -14,6 +14,11 @@ bot.on('ready', function() {
 bot.login("NDMzNjYzMDIzMTczOTkyNDUy.DbKxgw.Z9wERpXG-iRS6XuPbKAnw1KP6mo");
 
 bot.on('message', message => {
+  if (message.content === '&avatar') {
+    message.reply(message.author.avatarURL)
+
+
+bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
         if(spliteMessage[0] === "&hello") {
