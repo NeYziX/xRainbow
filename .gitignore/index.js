@@ -61,29 +61,7 @@ bot.on('message', message => {
         bot.channels.get('434402884516446230').send("Commande &help utilisée par : " + message.author.username);
         }
     }
-});
-
-bot.on('message', message => {
-    if (message.content === prefix + "ping"){
-        message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
-    }
-    
-    if (message.content.startsWith(prefix + "question")) {
-
-        if (args[1] != null) message.reply(eightball[Math.floor(Math.random() * eightball.length).toString(16)]);
-
-        else message.channel.send("Ummmm, quel es ta question?? 🙄 (Utilisation correcte: &question [question])");
-
-    }
-
-    if (message.content.startsWith(prefix + "q")) {
-
-       if (args[1] != null) message.reply(eightball[Math.floor(Math.random() * eightball.length).toString(16)]);
-
-       else message.channel.send("Ummmm, quel es ta question?? 🙄 (Utilisation correcte: &question [question])");
-
-    }   
-});    
+});  
 
 bot.on('message', message => {
 
