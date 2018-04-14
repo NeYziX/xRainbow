@@ -21,7 +21,7 @@ bot.on('message', message => {
 
 bot.on('message', message => {
   if (message.content === 'sgsfgsfgsfgsfg') {
-    message.channel.send("Ajout de la commande &avatar ! \n \n Elle fonctionne que sur vous "pour l'instant" juste à faire "&avataré à vous d'essayer dans #commandes-bot-🔩. \n \n Cordialement, xRainbow");
+    message.channel.send("Ajout de la commande &avatar ! \n \n Elle fonctionne que sur vous _pour l'instant_ juste à faire **&avatar** à vous d'essayer dans #commandes-bot-🔩. \n \n Cordialement, xRainbow");
   }
 });
 
