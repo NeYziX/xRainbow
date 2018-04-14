@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 
 var prefix = ("&");
 
-var eightball = [
+var question = [
     "Oui!",
     "Non...",
     "Peut-être?",
@@ -67,6 +67,22 @@ bot.on('message', message => {
     if (message.content === prefix + "ping"){
         message.channel.sendMessage("Temps de latence avec le serveur : " + `${message.createdTimestamp - Date.now()}` + "MS");  
     }
+    
+    if (message.content.startsWith(prefix + "question")) {
+
+        if (args[1] != null) message.reply(question[Math.floor(Math.random() * question.length).toString(16)]);
+
+        else message.channel.send("Ummmm, quel es ta question?? 🙄 (Utilisation correcte: &question [question])");
+
+    }
+
+    if (message.content.startsWith(prefix + "q")) {
+
+       if (args[1] != null) message.reply(question[Math.floor(Math.random() * question.length).toString(16)]);
+
+       else message.channel.send("Ummmm, quel es ta question?? 🙄 (Utilisation correcte: &question [question])");
+
+    }   
 });    
 
 bot.on('message', message => {
