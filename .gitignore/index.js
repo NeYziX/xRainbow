@@ -20,6 +20,12 @@ bot.on('message', message => {
 });
 
 bot.on('message', message => {
+  if (message.content === 'sgsfgsfgsfgsfg') {
+    message.channel.send("Ajout de la commande &avatar ! \n \n Elle fonctionne que sur vous "pour l'instant" juste à faire "&avataré à vous d'essayer dans #commandes-bot-🔩. \n \n Cordialement, xRainbow)
+  }
+});
+
+bot.on('message', message => {
     if(message.content[0] === prefix) {
         let spliteMessage = message.content.split(' ');
         if(spliteMessage[0] === "&hello") {
