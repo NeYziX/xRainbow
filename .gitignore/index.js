@@ -14,10 +14,6 @@ bot.on('ready', function() {
 bot.login("NDMzNjYzMDIzMTczOTkyNDUy.DbKxgw.Z9wERpXG-iRS6XuPbKAnw1KP6mo");
 
 bot.on('message', message => {
-  if (message.content === '&avatar') {
-    message.reply("voici ton avatar : " + message.author.avatarURL)
-  }
-
   if (message.content.startsWith(prefix + "avatar")) {
 
 message.channel.send({embed: {
@@ -37,12 +33,6 @@ message.channel.send({embed: {
     })
 
 }
-});
-
-bot.on('message', message => {
-  if (message.content === 'sgsfgsfgsfgsfg') {
-    message.channel.send("Ajout de la commande &avatar ! \n \n Elle fonctionne que sur vous _pour l'instant_ juste à faire **&avatar** à vous d'essayer dans #433673343993118730. \n \n Cordialement, xRainbow");
-  }
 });
 
 bot.on('message', message => {
@@ -84,7 +74,7 @@ bot.on('message', message => {
         .addField("Utilisateurs sur le Discord :", message.guild.memberCount)
         .addField("ID :", "429755740589391873")
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0xFFFF00")
     message.channel.sendEmbed(embed)
     }
 });
@@ -96,7 +86,7 @@ bot.on('message', message => {
         .setDescription("Pour visiter le site du créateur :")
         .addField("Lien :", "http://xrainbow.000webhostapp.com")
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0xFFFF00")
     message.channel.sendEmbed(embed)
     }
 });
@@ -108,7 +98,7 @@ bot.on('message', message => {
         .setDescription("Réseaux sociaux de xRainbow :")
         .addField("Instagram :", "...") 
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0xFFFF00")
     message.channel.sendEmbed(embed)
     }
 });
@@ -120,7 +110,7 @@ bot.on('message', message => {
         .setDescription("Réseaux sociaux de PastelWorld :")
         .addField("Instagram :", "...")
         .setFooter("©NeYziX | Tous droits réservés.")
-        .setColor("0x81DAF5")
+        .setColor("0xFFFF00")
     message.channel.sendEmbed(embed)
     }
 });
