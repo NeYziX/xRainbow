@@ -108,7 +108,7 @@ bot.on('message', message => {
 
     if (message.content === prefix + "socialmedia") {
         var embed = new Discord.RichEmbed()
-        .setDescription("Réseaux sociaux de PastelWorld :")
+        .setDescription("Réseaux sociaux de xRainbow :")
         .addField("Instagram :", "...")
         .setFooter("©NeYziX | Tous droits réservés.")
         .setColor("0xFFFF00")
@@ -120,7 +120,7 @@ bot.on('messageReactionAdd', (reaction, user) => {
     if(reaction.emoji.name === "☺")
         bot.channels.get('434402884516446230').send("EZ");
   
-    bot.channels.get('434402884516446230').send("Réaction utilisée : " + reaction.emoji.name);
+    bot.channels.get('434402884516446230').send("Réaction utilisée : " + reaction.emoji.name) + reaction.channel.send ;
 });
 
 bot.on("guildMemberAdd", member => {
